@@ -21,6 +21,11 @@ def update_row_property(row, property_name, value):
     setattr(row, property_name, value)
 
 
+@app.route("/")
+def home():
+    return "Hell World"
+
+
 @app.route("/tableentry", methods=["POST"])
 def tableEntry():
     content = request.get_json(silent=True)
